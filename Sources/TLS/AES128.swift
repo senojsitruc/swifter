@@ -84,11 +84,12 @@ public struct AES128 {
         public var s30, s31, s32, s33 : UInt8
         
         public var description: String {
-            return
-                "[" + [self.s00, self.s01, self.s02, self.s03].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n" +
-                "[" + [self.s10, self.s11, self.s12, self.s13].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n" +
-                "[" + [self.s20, self.s21, self.s22, self.s23].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n" +
-                "[" + [self.s30, self.s31, self.s32, self.s33].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]"
+						let s1 = "[" + [self.s00, self.s01, self.s02, self.s03].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n"
+						let s2 = "[" + [self.s10, self.s11, self.s12, self.s13].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n"
+						let s3 = "[" + [self.s20, self.s21, self.s22, self.s23].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]\n"
+						let s4 = "[" + [self.s30, self.s31, self.s32, self.s33].map({ String(format: "%02x", $0) }).joined(separator: ",") + "]"
+					
+					return s1 + s2 + s3 + s4
         }
     }
     
